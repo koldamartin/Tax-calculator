@@ -5,6 +5,7 @@ countries_full = ["USA", "Irsko", "Francie", "Velká Británie", "Švýcarsko", 
                   "Lucembursko", "Německo", "Jersey", "Španělsko", "Belgie", "Rakousko", "Portugalsko"]
 countries_data = pandas.DataFrame({'shortcuts': countries_shortcuts, 'full names': countries_full})
 
+#jednotné kurzy jsou zde https://www.mfcr.cz/assets/cs/media/2023-01-05_Financni-zpravodaj-cislo-1-2023_v02.pdf
 USD_UFX = 23.41
 GBX_UFX = 0.2872
 GBP_UFX = GBX_UFX * 100

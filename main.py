@@ -1,12 +1,6 @@
 import pandas
 from countries_list import countries_data, currencies_data
 
-#jednotné kurzy jsou zde https://www.mfcr.cz/assets/cs/media/2023-01-05_Financni-zpravodaj-cislo-1-2023_v02.pdf
-USD_UFX = 23.41
-GBX_UFX = 0.2872
-EUR_UFX = 24.54
-CHF_UFX = 24.51
-
 df = pandas.read_csv("2022_trading212_tax_report.csv")
 
 def profit(currency):
