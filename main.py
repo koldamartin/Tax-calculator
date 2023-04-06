@@ -18,9 +18,13 @@ def income(currency):
 def paragraph10():
     total_income = 0
     total_profit = 0
-    for name, value in zip(currencies_data["name"], currencies_data["value"]):
-        one_income = income(name) * value
-        one_profit = profit(name) * value
+    # for loop v dataframe lze napsat dvema zpusoby
+    # for name, value in zip(currencies_data["name"], currencies_data["value"]):
+    #     one_income = income(name) * value
+    #     one_profit = profit(name) * value
+    for (index,row) in currencies_data.iterrows():
+        one_income = income(row['name']) * row['value']
+        one_profit = profit(row['name']) * row['value']
         total_income += one_income
         total_profit += one_profit
     total_expenses = total_income - total_profit
@@ -46,10 +50,16 @@ def paragraph8():
     for country in countries_data["shortcuts"]:
         divi_one_country = 0
         tax_one_country = 0
-        for name, value in zip(currencies_data["name"], currencies_data["value"]):
-            divi_one_country_one_currency = dividend_income(name, country) * value
+        # for loop v dataframe lze napsat dvema zpusoby
+        # for name, value in zip(currencies_data["name"], currencies_data["value"]):
+        #     divi_one_country_one_currency = dividend_income(name, country) * value
+        #     divi_one_country += divi_one_country_one_currency
+        #     tax_country_one_currency = withholding_tax(name, country) * value
+        #     tax_one_country += tax_country_one_currency
+        for (index,row) in currencies_data.iterrows():
+            divi_one_country_one_currency = dividend_income(row['name'], country) * row['value']
             divi_one_country += divi_one_country_one_currency
-            tax_country_one_currency = withholding_tax(name, country) * value
+            tax_country_one_currency = withholding_tax(row['name'], country) * row['value']
             tax_one_country += tax_country_one_currency
         divi_all += divi_one_country
         if divi_one_country > 0:
