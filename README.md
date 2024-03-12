@@ -1,4 +1,4 @@
-# Tax calculator - Interactive Broers, Patria, Etoro, Trading212
+# Tax calculator - Interactive Brokers, Patria, Etoro, Trading212
 Daňové přiznání v ČR se značně liší od podkladů zahraničních brokerů. Tento program umí po načtení csv souborů za daný rok spočítat daně z kapitálových příjmů §10 a ze zahraničních dividend §8. Zahraniční daně jsou počítány pro každou zemi zvlášť, aby se mohl provést daňový odpočet z již zaplacené daně.
 
 
